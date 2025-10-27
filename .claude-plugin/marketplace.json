@@ -1,0 +1,14 @@
+{
+  "name": "nikkie-marketplace",
+  "owner": {
+    "name": "ftnext"
+  },
+  "plugins": [
+    {
+      "name": "opinionated-python-hook",
+      "version": "0.1.0",
+      "source": "./plugins/opinionated-python-hook",
+      "category": "development"
+    }
+  ]
+}

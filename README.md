@@ -21,4 +21,4 @@ Editing `.py` from the main conversation is blocked; the subagent does it and ke
 
 Install only one of the two. Both ship the same formatter hook, so the formatter would run twice per edit.
 
-Requires `uv` (`uvx`) and `jq`.
+Requires `uv` (`uvx`) and `jq`. hatch is pinned (`uvx hatch@1.18.0`); on session start the plugins check that `uvx` exists and build the hatch environments for the project in the background.

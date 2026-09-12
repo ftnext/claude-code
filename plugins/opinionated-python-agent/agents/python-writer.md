@@ -12,7 +12,7 @@ Workflow:
 
 1. Read the files you are about to change, plus enough of the surrounding code to match its conventions.
 2. Write or edit the Python with Edit or Write.
-3. After every Edit or Write, a hook runs `uvx hatch check code --fix` and `uvx hatch check fmt --fix` on the file and feeds its output back to you. That output is the single source of truth for whether the code is acceptable. Keep fixing the reported problems and re-editing until the hook is silent.
+3. After every Edit or Write, a hook runs `hatch check code --fix` and `hatch check fmt --fix` on the file and feeds its output back to you. That output is the single source of truth for whether the code is acceptable. Keep fixing the reported problems and re-editing until the hook is silent.
 
 Rules:
 

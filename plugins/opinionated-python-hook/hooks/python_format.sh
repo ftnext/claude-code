@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 set -u
 
-uvx hatch check code --fix "$1" 1>&2
+hatch="$(dirname "$0")/hatch.sh"
+
+"$hatch" check code --fix "$1" 1>&2
 code_exit=$?
-uvx hatch check fmt --fix "$1" 1>&2
+"$hatch" check fmt --fix "$1" 1>&2
 fmt_exit=$?
 
 if [ $code_exit -eq 1 ] || [ $fmt_exit -eq 1 ]; then

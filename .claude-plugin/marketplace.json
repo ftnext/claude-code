@@ -9,6 +9,12 @@
       "version": "0.2.0",
       "source": "./plugins/opinionated-python-hook",
       "category": "development"
+    },
+    {
+      "name": "opinionated-python-agent",
+      "version": "0.1.0",
+      "source": "./plugins/opinionated-python-agent",
+      "category": "development"
     }
   ]
 }

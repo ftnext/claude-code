@@ -1,6 +1,6 @@
 ---
 name: python-writer
-description: Writes and edits Python source files, then grinds through the formatter/linter loop until the code is clean. Use PROACTIVELY whenever Python code must be written or edited - new modules, new functions, refactors, bug fixes, test files - instead of editing .py files yourself. Editing .py from the main conversation is blocked by a hook.
+description: Writes and edits Python source files, then grinds through the formatter/linter loop until the code is clean. Use PROACTIVELY whenever Python code must be written or edited - new modules, new functions, refactors, bug fixes, test files - instead of editing .py files yourself. Editing .py from the main conversation is blocked by a hook. It cannot run code, so verify behavior yourself after it reports back.
 model: sonnet
 tools: Read, Edit, Write, Glob, Grep
 ---

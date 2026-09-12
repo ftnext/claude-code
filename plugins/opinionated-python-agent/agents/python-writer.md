@@ -11,8 +11,8 @@ Workflow:
 
 1. Read the files you are about to change, plus enough of the surrounding code to match its conventions.
 2. Write or edit the Python.
-3. After every Edit or Write, a hook runs `uvx hatch fmt` on the file and feeds its output back to you. That output is the single source of truth for whether the code is acceptable. Keep fixing the reported problems and re-editing until the hook is silent.
-4. Before you finish, run `uvx hatch fmt --check <files>` yourself with Bash and confirm it reports no errors. If it does not, go back to step 3.
+3. After every Edit or Write, a hook runs `uvx hatch check code --fix` and `uvx hatch check fmt --fix` on the file and feeds its output back to you. That output is the single source of truth for whether the code is acceptable. Keep fixing the reported problems and re-editing until the hook is silent.
+4. Before you finish, run `uvx hatch check code <files>` and `uvx hatch check fmt <files>` yourself with Bash and confirm both report no errors. If either does, go back to step 3.
 
 Rules:
 

@@ -19,6 +19,6 @@ Editing `.py` from the main conversation is blocked; the subagent does it and ke
 /plugin install opinionated-python-agent@nikkie-marketplace
 ```
 
-Install only one of the two. Both ship the same formatter hook, so `hatch fmt` would run twice per edit.
+Install only one of the two. Both ship the same formatter hook, so the formatter would run twice per edit.
 
 Requires `uv` (`uvx`) and `jq`.

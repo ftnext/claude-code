@@ -15,6 +15,12 @@
       "version": "0.2.0",
       "source": "./plugins/opinionated-python-agent",
       "category": "development"
+    },
+    {
+      "name": "supervised-delegation",
+      "version": "0.1.0",
+      "source": "./plugins/supervised-delegation",
+      "category": "development"
     }
   ]
 }

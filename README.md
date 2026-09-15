@@ -23,9 +23,21 @@ Install only one of the two. Both ship the same formatter hook, so the formatter
 
 Requires `uv` (`uvx`) and `jq`. hatch is pinned (`uvx hatch@1.18.0`); on session start the plugins check that `uvx` exists and build the hatch environments for the project in the background.
 
+## supervised-delegation
+
+A skill, not a hook, and independent of the two Python plugins above.
+It runs a substantial coding request as a supervised multi-agent operation: investigation is delegated to Opus subagents, implementation to Sonnet subagents, and PR review-response to an Opus babysitter, while your main session stays the supervisor that reads the diffs, commits, and reports.
+It triggers on requests like "監督して", "調査はOpusに、実装はSonnetに", "delegate this", or "babysit the PR".
+
+```
+/plugin install supervised-delegation@nikkie-marketplace
+```
+
+No external dependencies. By design it routes investigation and PR babysitting to Opus subagents, so expect several concurrent Opus runs per task.
+
 ## Evals
 
-Each plugin ships `claude plugin eval` suites under `evals/`. They check that Python
+The two Python plugins ship `claude plugin eval` suites under `evals/`. They check that Python
 writing gets delegated to the subagent (or blocked and then delegated) as expected,
 that the gate/hook fires when it should, that the produced code has no `noqa`,
 `print()`, or f-string logging, and that the files really pass `hatch check` (not

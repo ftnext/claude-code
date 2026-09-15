@@ -1,0 +1,5 @@
+{
+  "name": "supervised-delegation",
+  "version": "0.1.0",
+  "description": "Supervise multi-agent coding work: Opus investigates, Sonnet implements, an Opus babysitter handles PR review, the main session reviews and ships"
+}

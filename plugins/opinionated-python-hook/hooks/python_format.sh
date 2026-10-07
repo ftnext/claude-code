@@ -3,7 +3,7 @@ set -u
 
 hatch="$(dirname "$0")/hatch.sh"
 
-"$hatch" check code --fix "$1" 1>&2
+"$hatch" check code --fix --preview "$1" 1>&2
 code_exit=$?
 "$hatch" check fmt --fix "$1" 1>&2
 fmt_exit=$?

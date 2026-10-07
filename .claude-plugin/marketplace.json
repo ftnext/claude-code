@@ -6,13 +6,13 @@
   "plugins": [
     {
       "name": "opinionated-python-hook",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "source": "./plugins/opinionated-python-hook",
       "category": "development"
     },
     {
       "name": "opinionated-python-agent",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "source": "./plugins/opinionated-python-agent",
       "category": "development"
     },

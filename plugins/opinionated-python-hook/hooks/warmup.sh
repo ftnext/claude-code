@@ -13,6 +13,6 @@ trap 'rm -rf "$tmp"' EXIT
 
 printf 'x = 1\n' > "$tmp/warmup.py"
 export RUFF_CACHE_DIR="$tmp/ruff_cache"
-"$hatch" check code "$tmp/warmup.py" >/dev/null 2>&1
+"$hatch" check code --preview "$tmp/warmup.py" >/dev/null 2>&1
 "$hatch" check fmt "$tmp/warmup.py" >/dev/null 2>&1
 exit 0

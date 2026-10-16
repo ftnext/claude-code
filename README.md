@@ -23,6 +23,8 @@ Install only one of the two. Both ship the same formatter hook, so the formatter
 
 Requires `uv` (`uvx`) and `jq`. hatch is pinned (`uvx hatch@1.18.0`); on session start the plugins check that `uvx` exists and build the hatch environments for the project in the background.
 
+The linter runs with Ruff preview rules enabled (`hatch check code --preview`), e.g. [RUF029 unused-async](https://docs.astral.sh/ruff/rules/unused-async/). The formatter uses the stable style.
+
 ## supervised-delegation
 
 A skill, not a hook, and independent of the two Python plugins above.
@@ -58,3 +60,12 @@ scripts/run-evals.sh plugins/opinionated-python-agent --runs 1 --ablation none -
 
 This runs on your own Claude login (subscription usage; no API key needed). A full
 run costs a few dollars of API-equivalent usage.
+
+## Tests
+
+The formatter hook itself is tested without a model: it runs both plugins'
+`python_format.sh` on small fixtures and checks the exit codes and diagnostics.
+
+```
+tests/test-python-format.sh
+```

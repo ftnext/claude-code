@@ -1,5 +1,5 @@
 {
   "name": "opinionated-python-agent",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Strict Python formatter hook, plus a subagent that absorbs the lint-fix loop"
 }

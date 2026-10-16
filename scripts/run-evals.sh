@@ -46,7 +46,7 @@ for dir in $kept_dirs; do
         # Run with cwd = copy_dir and a relative filename: an absolute path
         # makes ruff misdetect the lone file as an implicit namespace package
         # (INP001) since there's no pyproject.toml above it.
-        if (cd "$copy_dir" && "$hatch" check code "$name") >/dev/null 2>&1; then code_status=PASS; else code_status=FAIL; fi
+        if (cd "$copy_dir" && "$hatch" check code --preview "$name") >/dev/null 2>&1; then code_status=PASS; else code_status=FAIL; fi
         if (cd "$copy_dir" && "$hatch" check fmt "$name") >/dev/null 2>&1; then fmt_status=PASS; else fmt_status=FAIL; fi
         if [ "$arm" = with ]; then
             [ "$code_status" = FAIL ] && hatch_failed=1
